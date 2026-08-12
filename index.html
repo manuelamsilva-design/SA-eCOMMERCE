@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore Júnior</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Página Inicial -->
+  <header>
+    <h1>TechStore Júnior</h1>
+    <p>Acessórios para celular, informática e eletrônicos</p>
+  </header>
+
+  <div class="pagina">
+
+    <!-- Coluna esquerda: produtos e carrinho -->
+    <main>
+
+      <!-- Listagem de Produtos -->
+      <section id="produtos">
+        <h2>Produtos</h2>
+        <div class="grid-produtos" id="grid-produtos">
+
+          <!-- Produto 1 -->
+          <div class="card-produto">
+            <img src="imagens/fone-bluetooth.jpg" alt="Fone Bluetooth" class="imagem-produto">
+            <h3>Fone Bluetooth</h3>
+            <p class="preco">R$ 89,90</p>
+            <button onclick="adicionarAoCarrinho(1)">Adicionar</button>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="card-produto">
+            <img src="imagens/carregador-turbo.jpg" alt="Carregador Turbo" class="imagem-produto">
+            <h3>Carregador Turbo</h3>
+            <p class="preco">R$ 49,90</p>
+            <button onclick="adicionarAoCarrinho(2)">Adicionar</button>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="card-produto">
+            <img src="imagens/mouse-sem-fio.jpg" alt="Mouse Sem Fio" class="imagem-produto">
+            <h3>Mouse Sem Fio</h3>
+            <p class="preco">R$ 59,90</p>
+            <button onclick="adicionarAoCarrinho(3)">Adicionar</button>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="card-produto">
+            <img src="imagens/capa-celular.jpg" alt="Capa de Celular" class="imagem-produto">
+            <h3>Capa de Celular</h3>
+            <p class="preco">R$ 29,90</p>
+            <button onclick="adicionarAoCarrinho(4)">Adicionar</button>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="card-produto">
+            <img src="imagens/power-bank.jpg" alt="Power Bank 10000mAh" class="imagem-produto">
+            <h3>Power Bank 10000mAh</h3>
+            <p class="preco">R$ 119,90</p>
+            <button onclick="adicionarAoCarrinho(5)">Adicionar</button>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Coluna direita: carrinho + finalizar pedido, tudo junto -->
+    <aside id="finalizar">
+
+      <!-- Área do Carrinho -->
+      <h2>Carrinho</h2>
+      <ul id="lista-carrinho">
+        <li class="vazio">Seu carrinho está vazio</li>
+      </ul>
+
+      <div class="resumo">
+        <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+        <p id="linha-desconto" class="desconto oculto">Desconto (10%): <span id="desconto">R$ 0,00</span></p>
+        <p class="total-final">Total: <span id="total">R$ 0,00</span></p>
+      </div>
+
+      <hr>
+
+      <!-- Formulário de finalização -->
+      <h2>Finalizar pedido</h2>
+      <p class="erro" id="erro-carrinho"></p>
+      <form id="form-pedido">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <span class="erro" id="erro-nome"></span>
+
+        <label for="email">E-mail</label>
+        <input type="text" id="email" placeholder="seuemail@exemplo.com">
+        <span class="erro" id="erro-email"></span>
+
+        <button type="submit">Confirmar pedido</button>
+        <p class="sucesso oculto" id="mensagem-sucesso">Pedido confirmado com sucesso!</p>
+      </form>
+    </aside>
+
+  </div>
+
+  <footer>
+    <p>TechStore Júnior — O melhor quando o assunto é tecnologia!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
