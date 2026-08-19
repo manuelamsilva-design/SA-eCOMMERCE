@@ -1,112 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechStore Júnior</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportZone</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Página Inicial -->
-  <header>
-    <h1>TechStore Júnior</h1>
-    <p>Acessórios para celular, informática e eletrônicos</p>
+  <!-- CABEÇALHO -->
+  <header id="cabecalho">
+    <div class="logo">
+      <h1>🏀 SportZone</h1>
+      <p>Artigos esportivos para todos os níveis</p>
+    </div>
+
+    <nav id="menu-principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="pagina">
+  <!-- PÁGINA INICIAL -->
+  <section id="inicio">
+    <div class="banner">
+      <h2>Equipamentos de qualidade para o seu esporte</h2>
+      <p>Bolas, tênis, roupas e acessórios com os melhores preços da região.</p>
+      <a href="#produtos" class="botao-cta">Ver Produtos</a>
+    </div>
+  </section>
 
-    <!-- Coluna esquerda: produtos e carrinho -->
-    <main>
+  <!-- LISTAGEM DE PRODUTOS -->
+  <section id="produtos">
+    <h2>Nossos Produtos</h2>
 
-      <!-- Listagem de Produtos -->
-      <section id="produtos">
-        <h2>Produtos</h2>
-        <div class="grid-produtos" id="grid-produtos">
+    <div class="lista-produtos">
 
-          <!-- Produto 1 -->
-          <div class="card-produto">
-            <img src="imagens/fone-bluetooth.jpg" alt="Fone Bluetooth" class="imagem-produto">
-            <h3>Fone Bluetooth</h3>
-            <p class="preco">R$ 89,90</p>
-            <button onclick="adicionarAoCarrinho(1)">Adicionar</button>
-          </div>
-
-          <!-- Produto 2 -->
-          <div class="card-produto">
-            <img src="imagens/carregador-turbo.jpg" alt="Carregador Turbo" class="imagem-produto">
-            <h3>Carregador Turbo</h3>
-            <p class="preco">R$ 49,90</p>
-            <button onclick="adicionarAoCarrinho(2)">Adicionar</button>
-          </div>
-
-          <!-- Produto 3 -->
-          <div class="card-produto">
-            <img src="imagens/mouse-sem-fio.jpg" alt="Mouse Sem Fio" class="imagem-produto">
-            <h3>Mouse Sem Fio</h3>
-            <p class="preco">R$ 59,90</p>
-            <button onclick="adicionarAoCarrinho(3)">Adicionar</button>
-          </div>
-
-          <!-- Produto 4 -->
-          <div class="card-produto">
-            <img src="imagens/capa-celular.jpg" alt="Capa de Celular" class="imagem-produto">
-            <h3>Capa de Celular</h3>
-            <p class="preco">R$ 29,90</p>
-            <button onclick="adicionarAoCarrinho(4)">Adicionar</button>
-          </div>
-
-          <!-- Produto 5 -->
-          <div class="card-produto">
-            <img src="imagens/power-bank.jpg" alt="Power Bank 10000mAh" class="imagem-produto">
-            <h3>Power Bank 10000mAh</h3>
-            <p class="preco">R$ 119,90</p>
-            <button onclick="adicionarAoCarrinho(5)">Adicionar</button>
-          </div>
-
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Coluna direita: carrinho + finalizar pedido, tudo junto -->
-    <aside id="finalizar">
-
-      <!-- Área do Carrinho -->
-      <h2>Carrinho</h2>
-      <ul id="lista-carrinho">
-        <li class="vazio">Seu carrinho está vazio</li>
-      </ul>
-
-      <div class="resumo">
-        <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
-        <p id="linha-desconto" class="desconto oculto">Desconto (10%): <span id="desconto">R$ 0,00</span></p>
-        <p class="total-final">Total: <span id="total">R$ 0,00</span></p>
+      <!-- Produto 1 -->
+      <div class="card-produto" id="produto-1">
+        <img src="https://m.media-amazon.com/images/I/813Zetw4zGL.jpg" alt="Bola de Futebol">
+        <h3>Bola de Futebol</h3>
+        <p class="descricao">Bola tamanho profissional, ideal para treinos e jogos.</p>
+        <p class="preco">R$ 129,90</p>
+        <input type="number" class="quantidade" min="1" value="1">
+        <button class="btn-adicionar" data-id="1" data-nome="Bola de Futebol Oficial" data-preco="129.90">
+          Adicionar ao Carrinho
+        </button>
       </div>
 
-      <hr>
+      <!-- Produto 2 -->
+      <div class="card-produto" id="produto-2">
+        <img src="https://pbs.twimg.com/media/ErYeKl9XMAE5kZh.jpg" alt="Tênis de Corrida">
+        <h3>Tênis de Cavalo</h3>
+        <p class="descricao">Leve, confortável e com ótimo amortecimento.</p>
+        <p class="preco">R$ 299,90</p>
+        <input type="number" class="quantidade" min="1" value="1">
+        <button class="btn-adicionar" data-id="2" data-nome="Tênis de Corrida Runner Pro" data-preco="299.90">
+          Adicionar ao Carrinho
+        </button>
+      </div>
 
-      <!-- Formulário de finalização -->
-      <h2>Finalizar pedido</h2>
-      <p class="erro" id="erro-carrinho"></p>
-      <form id="form-pedido">
-        <label for="nome">Nome completo</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
-        <span class="erro" id="erro-nome"></span>
+      <!-- Produto 3 -->
+      <div class="card-produto" id="produto-3">
+        <img src="https://socd.vtexassets.com/arquivos/ids/189082-800-auto?v=639044349876800000&width=800&height=auto&aspect=true" alt="Camisa Esportiva" >
+        <h3>Camisa Esportiva Dry-Fit</h3>
+        <p class="descricao">Desc aq.</p>
+        <p class="preco">R$ 79,90</p>
+        <input type="number" class="quantidade" min="1" value="1">
+        <button class="btn-adicionar" data-id="3" data-nome="Camisa Esportiva Dry-Fit" data-preco="79.90">
+          Adicionar ao Carrinho
+        </button>
+      </div>
 
-        <label for="email">E-mail</label>
-        <input type="text" id="email" placeholder="seuemail@exemplo.com">
-        <span class="erro" id="erro-email"></span>
+      <!-- Produto 4 -->
+      <div class="card-produto" id="produto-4">
+        <img src="https://images.tcdn.com.br/img/img_prod/841504/bola_de_basquete_26_cm_de_diametro_wx4497_262184_1_f83af028ebc8afd9159ade837257130d.jpg" alt="Bola de Basquete">
+        <h3>Bola de Basquete</h3>
+        <p class="descricao">Desc aq.</p>
+        <p class="preco">R$ 149,90</p>
+        <input type="number" class="quantidade" min="1" value="1">
+        <button class="btn-adicionar" data-id="4" data-nome="Bola de Basquete NBA Style" data-preco="149.90">
+          Adicionar ao Carrinho
+        </button>
+      </div>
 
-        <button type="submit">Confirmar pedido</button>
-        <p class="sucesso oculto" id="mensagem-sucesso">Pedido confirmado com sucesso!</p>
+    </div>
+  </section>
+
+  <!-- ÁREA DO CARRINHO -->
+  <section id="carrinho">
+    <h2>🛒 Meu Carrinho</h2>
+
+    <table id="tabela-carrinho">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário</th>
+          <th>Subtotal</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody id="itens-carrinho">
+        <!-- Os itens adicionados serão inseridos aqui via JavaScript -->
+        <tr id="carrinho-vazio">
+          <td colspan="5">Seu carrinho está vazio.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="resumo-carrinho">
+      <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+      <p>Desconto: <span id="desconto">R$ 0,00</span></p>
+      <p class="total">Total: <span id="total">R$ 0,00</span></p>
+    </div>
+
+    <!-- FORMULÁRIO DE FINALIZAÇÃO -->
+    <div class="formulario-compra">
+      <h3>Finalizar Pedido</h3>
+      <form id="form-compra">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" id="btn-finalizar">Finalizar Compra</button>
       </form>
-    </aside>
+      <p id="mensagem-validacao"></p>
+    </div>
+  </section>
 
-  </div>
-
-  <footer>
-    <p>TechStore Júnior — O melhor quando o assunto é tecnologia!</p>
+  <!-- RODAPÉ -->
+  <footer id="contato">
+    <p>SportZone 2026 - SA Log. Prog - Davi, Manuela, Nicolas </p>
+    <p>Loja virtual de apresentação, sem pagamento real ou banco de dados.</p>
   </footer>
 
   <script src="script.js"></script>
