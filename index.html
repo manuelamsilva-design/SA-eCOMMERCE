@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- CABEÇALHO: logo à esquerda, botões/menu à direita -->
   <header id="cabecalho">
     <div class="logo">
       <h1>🏀 SportZone</h1>
@@ -17,7 +17,6 @@
 
     <nav id="menu-principal">
       <ul>
-        <li><a href="#inicio">Início</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#carrinho">Carrinho</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -25,120 +24,115 @@
     </nav>
   </header>
 
-  <!-- PÁGINA INICIAL -->
-  <section id="inicio">
-    <div class="banner">
-      <h2>Equipamentos de qualidade para o seu esporte</h2>
-      <p>Bolas, tênis, roupas e acessórios com os melhores preços da região.</p>
-      <a href="#produtos" class="botao-cta">Ver Produtos</a>
-    </div>
-  </section>
+  <!-- LAYOUT PRINCIPAL: produtos à esquerda, carrinho/compra à direita -->
+  <div class="layout-principal">
 
-  <!-- LISTAGEM DE PRODUTOS -->
-  <section id="produtos">
-    <h2>Nossos Produtos</h2>
+    <!-- COLUNA ESQUERDA: LISTAGEM DE PRODUTOS -->
+    <section id="produtos">
+      <h2>Nossos Produtos</h2>
 
-    <div class="lista-produtos">
+      <div class="lista-produtos">
 
-      <!-- Produto 1 -->
-      <div class="card-produto" id="produto-1">
-        <img src="https://m.media-amazon.com/images/I/813Zetw4zGL.jpg" alt="Bola de Futebol">
-        <h3>Bola de Futebol</h3>
-        <p class="descricao">Bola tamanho profissional, ideal para treinos e jogos.</p>
-        <p class="preco">R$ 129,90</p>
-        <input type="number" class="quantidade" min="1" value="1">
-        <button class="btn-adicionar" data-id="1" data-nome="Bola de Futebol Oficial" data-preco="129.90">
-          Adicionar ao Carrinho
-        </button>
+        <!-- Produto 1 -->
+        <div class="card-produto" id="produto-1">
+          <img src="https://m.media-amazon.com/images/I/813Zetw4zGL.jpg" alt="Bola de Futebol">
+          <h3>Bola de Futebol</h3>
+          <p class="descricao">Desc aq.</p>
+          <p class="preco">R$ 129,90</p>
+          <input type="number" class="quantidade" min="1" value="1">
+          <button class="btn-adicionar" data-id="1" data-nome="Bola de Futebol" data-preco="129.90">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="card-produto" id="produto-2">
+          <img src="https://pbs.twimg.com/media/ErYeKl9XMAE5kZh.jpg" alt="Tênis de Corrida">
+          <h3>Tênis de Cavalo</h3>
+          <p class="descricao">Desc aq.</p>
+          <p class="preco">R$ 149,90</p>
+          <input type="number" class="quantidade" min="1" value="1">
+          <button class="btn-adicionar" data-id="2" data-nome="Tênis de Cavalo" data-preco="149.90">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="card-produto" id="produto-3">
+          <img src="https://socd.vtexassets.com/arquivos/ids/189082-800-auto?v=639044349876800000&width=800&height=auto&aspect=true" alt="Camisa Esportiva">
+          <h3>Camisa Dry-Fit</h3>
+          <p class="descricao">Desc aq.</p>
+          <p class="preco">R$ 79,90</p>
+          <input type="number" class="quantidade" min="1" value="1">
+          <button class="btn-adicionar" data-id="3" data-nome="Camisa Dry-Fit" data-preco="79.90">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="card-produto" id="produto-4">
+          <img src="https://images.tcdn.com.br/img/img_prod/841504/bola_de_basquete_26_cm_de_diametro_wx4497_262184_1_f83af028ebc8afd9159ade837257130d.jpg" alt="Bola de Basquete">
+          <h3>Bola de Basquete</h3>
+          <p class="descricao">Desc aq.</p>
+          <p class="preco">R$ 149,90</p>
+          <input type="number" class="quantidade" min="1" value="1">
+          <button class="btn-adicionar" data-id="4" data-nome="Bola de Basquete" data-preco="149.90">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLUNA DIREITA: CARRINHO / PARTE DA COMPRA -->
+    <aside id="carrinho">
+      <h2>🛒 Meu Carrinho</h2>
+
+      <table id="tabela-carrinho">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Qtd</th>
+            <th>Preço</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="itens-carrinho">
+          <!-- Os itens adicionados serão inseridos aqui via JavaScript -->
+          <tr id="carrinho-vazio">
+            <td colspan="5">Seu carrinho está vazio.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="resumo-carrinho">
+        <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+        <p>Desconto: <span id="desconto">R$ 0,00</span></p>
+        <p class="total">Total: <span id="total">R$ 0,00</span></p>
       </div>
 
-      <!-- Produto 2 -->
-      <div class="card-produto" id="produto-2">
-        <img src="https://pbs.twimg.com/media/ErYeKl9XMAE5kZh.jpg" alt="Tênis de Corrida">
-        <h3>Tênis de Cavalo</h3>
-        <p class="descricao">Leve, confortável e com ótimo amortecimento.</p>
-        <p class="preco">R$ 299,90</p>
-        <input type="number" class="quantidade" min="1" value="1">
-        <button class="btn-adicionar" data-id="2" data-nome="Tênis de Corrida Runner Pro" data-preco="299.90">
-          Adicionar ao Carrinho
-        </button>
+      <!-- FORMULÁRIO DE FINALIZAÇÃO -->
+      <div class="formulario-compra">
+        <h3>Finalizar Pedido</h3>
+        <form id="form-compra">
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <button type="submit" id="btn-finalizar">Finalizar Compra</button>
+        </form>
+        <p id="mensagem-validacao"></p>
       </div>
+    </aside>
 
-      <!-- Produto 3 -->
-      <div class="card-produto" id="produto-3">
-        <img src="https://socd.vtexassets.com/arquivos/ids/189082-800-auto?v=639044349876800000&width=800&height=auto&aspect=true" alt="Camisa Esportiva" >
-        <h3>Camisa Esportiva Dry-Fit</h3>
-        <p class="descricao">Desc aq.</p>
-        <p class="preco">R$ 79,90</p>
-        <input type="number" class="quantidade" min="1" value="1">
-        <button class="btn-adicionar" data-id="3" data-nome="Camisa Esportiva Dry-Fit" data-preco="79.90">
-          Adicionar ao Carrinho
-        </button>
-      </div>
-
-      <!-- Produto 4 -->
-      <div class="card-produto" id="produto-4">
-        <img src="https://images.tcdn.com.br/img/img_prod/841504/bola_de_basquete_26_cm_de_diametro_wx4497_262184_1_f83af028ebc8afd9159ade837257130d.jpg" alt="Bola de Basquete">
-        <h3>Bola de Basquete</h3>
-        <p class="descricao">Desc aq.</p>
-        <p class="preco">R$ 149,90</p>
-        <input type="number" class="quantidade" min="1" value="1">
-        <button class="btn-adicionar" data-id="4" data-nome="Bola de Basquete NBA Style" data-preco="149.90">
-          Adicionar ao Carrinho
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ÁREA DO CARRINHO -->
-  <section id="carrinho">
-    <h2>🛒 Meu Carrinho</h2>
-
-    <table id="tabela-carrinho">
-      <thead>
-        <tr>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Preço Unitário</th>
-          <th>Subtotal</th>
-          <th>Ação</th>
-        </tr>
-      </thead>
-      <tbody id="itens-carrinho">
-        <!-- Os itens adicionados serão inseridos aqui via JavaScript -->
-        <tr id="carrinho-vazio">
-          <td colspan="5">Seu carrinho está vazio.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="resumo-carrinho">
-      <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
-      <p>Desconto: <span id="desconto">R$ 0,00</span></p>
-      <p class="total">Total: <span id="total">R$ 0,00</span></p>
-    </div>
-
-    <!-- FORMULÁRIO DE FINALIZAÇÃO -->
-    <div class="formulario-compra">
-      <h3>Finalizar Pedido</h3>
-      <form id="form-compra">
-        <label for="nome">Nome completo:</label>
-        <input type="text" id="nome" name="nome" required>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <button type="submit" id="btn-finalizar">Finalizar Compra</button>
-      </form>
-      <p id="mensagem-validacao"></p>
-    </div>
-  </section>
+  </div>
 
   <!-- RODAPÉ -->
   <footer id="contato">
     <p>SportZone 2026 - SA Log. Prog - Davi, Manuela, Nicolas </p>
-    <p>Loja virtual de apresentação, sem pagamento real ou banco de dados.</p>
   </footer>
 
   <script src="script.js"></script>

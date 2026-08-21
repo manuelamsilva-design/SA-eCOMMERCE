@@ -1,3 +1,6 @@
+// =====================================================
+// SportZone - Lógica da Loja Virtual
+// =====================================================
 
 // Array que guarda os itens do carrinho
 // Cada item: { id, nome, preco, quantidade }
@@ -10,7 +13,10 @@ const spanSubtotal = document.getElementById("subtotal");
 const spanDesconto = document.getElementById("desconto");
 const spanTotal = document.getElementById("total");
 const mensagemValidacao = document.getElementById("mensagem-validacao");
+
+// =====================================================
 // 1) ADICIONAR PRODUTO AO CARRINHO
+// =====================================================
 
 // Pega todos os botões "Adicionar ao Carrinho" e liga o evento onclick
 const botoesAdicionar = document.querySelectorAll(".btn-adicionar");
