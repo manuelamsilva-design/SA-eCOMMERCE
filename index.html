@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO: logo à esquerda, botões/menu à direita -->
+  <!-- CABEÇALHO -->
   <header id="cabecalho">
     <div class="logo">
       <h1>🏀 SportZone</h1>
@@ -24,12 +24,16 @@
     </nav>
   </header>
 
-  <!-- LAYOUT PRINCIPAL: produtos à esquerda, carrinho/compra à direita -->
+  <!-- LAYOUT PRINCIPAL -->
   <div class="layout-principal">
 
-    <!-- COLUNA ESQUERDA: LISTAGEM DE PRODUTOS -->
+    <!-- COLUNA ESQUERDA -->
     <section id="produtos">
       <h2>Nossos Produtos</h2>
+
+      <p class="regra-desconto">
+        Leve <strong>3 produtos ou mais</strong> e ganhe <strong>10% de desconto</strong> automático no carrinho!
+      </p>
 
       <div class="lista-produtos">
 
@@ -84,7 +88,7 @@
       </div>
     </section>
 
-    <!-- COLUNA DIREITA: CARRINHO / PARTE DA COMPRA -->
+    <!-- CARRINHO -->
     <aside id="carrinho">
       <h2>🛒 Meu Carrinho</h2>
 
@@ -99,7 +103,7 @@
           </tr>
         </thead>
         <tbody id="itens-carrinho">
-          <!-- Os itens adicionados serão inseridos aqui via JavaScript -->
+          <!-- Os itens adicionados serão inseridos aqui via JavaScript (Davi) -->
           <tr id="carrinho-vazio">
             <td colspan="5">Seu carrinho está vazio.</td>
           </tr>
@@ -110,6 +114,7 @@
         <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
         <p>Desconto: <span id="desconto">R$ 0,00</span></p>
         <p class="total">Total: <span id="total">R$ 0,00</span></p>
+        <p id="aviso-desconto"></p>
       </div>
 
       <!-- FORMULÁRIO DE FINALIZAÇÃO -->
@@ -133,6 +138,7 @@
   <!-- RODAPÉ -->
   <footer id="contato">
     <p>SportZone 2026 - SA Log. Prog - Davi, Manuela, Nicolas </p>
+    <p>Loja virtual de apresentação, sem pagamento real ou banco de dados.</p>
   </footer>
 
   <script src="script.js"></script>
