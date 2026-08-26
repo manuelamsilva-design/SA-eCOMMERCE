@@ -150,7 +150,7 @@ formCompra.onsubmit = function (evento) {
   }
 
   mostrarMensagem(
-    "Pedido de " + nome + " registrado com sucesso!",
+    "Pedido de " + nome + " registrado com sucesso! (simulação, sem pagamento real)",
     "sucesso"
   );
 
