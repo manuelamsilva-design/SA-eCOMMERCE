@@ -52,8 +52,7 @@ a {
 }
 
 /*LAYOUT PRINCIPAL
-   Produtos numa coluna larga à esquerda, carrinho numa coluna
-   menor à direita. Fica fixo (sticky) enquanto rola a página. */
+
 .layout-principal {
   max-width: 1200px;
   margin: 20px auto;
