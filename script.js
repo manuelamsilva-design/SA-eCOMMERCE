@@ -1,5 +1,3 @@
-// SportZone - Lógica da loja virtual
-
 // Guarda os itens do carrinho: { id, nome, preco, quantidade }
 let carrinho = [];
 
@@ -115,7 +113,7 @@ function calcularTotais() {
   spanTotal.textContent = "R$ " + total.toFixed(2).replace(".", ",");
 
   if (descontoAplicado) {
-    avisoDesconto.textContent = "🎉 Desconto de 10% aplicado! Você levou " + quantidadeTotal + " produtos.";
+    avisoDesconto.textContent = "Desconto de 10% aplicado! Você levou " + quantidadeTotal + " produtos.";
     avisoDesconto.classList.add("ativo");
   } else {
     const faltam = QUANTIDADE_MINIMA_DESCONTO - quantidadeTotal;
